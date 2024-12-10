@@ -103,142 +103,135 @@ if __name__ == "__main__":
     def update_ui(etc_out_value):
         # Check if the 0th bit is set
         if etc_out_value & (1 << 0):
-            ui.cycleStartButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.cycleStartButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 0px")
         else:
-            ui.cycleStartButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.cycleStartButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48);")
             
         # Check if the 1st bit is set
         if etc_out_value & (1 << 1):
-            ui.cycleStopButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.cycleStopButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 0px")
         else:
-            ui.cycleStopButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.cycleStopButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48);")
 
         # Check if the 2nd bit is set
         if etc_out_value & (1 << 2):
             ui.drvButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.drvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.drvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48);")
 
         # Check if the 3rd bit is set
         if etc_out_value & (1 << 3):
             ui.jogButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.jogButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.jogButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
          # Check if the 4th bit is set
         if etc_out_value & (1 << 4):
             ui.xButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.xButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.xButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 5th bit is set
         if etc_out_value & (1 << 5):
             ui.plusButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.plusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.plusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 6th bit is set
         if etc_out_value & (1 << 6):
             ui.zLockButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.zLockButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.zLockButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 7th bit is set    
         if etc_out_value & (1 << 7):
            ui.mdiButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.mdiButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.mdiButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 8th bit is set
         if etc_out_value & (1 << 8):
              ui.yButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.yButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.yButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 9th bit is set
         if etc_out_value & (1 << 9):
             ui.vvvButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.vvvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.vvvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
          # Check if the 10th bit is set
         if etc_out_value & (1 << 10):
              ui.dryRunButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.dryRunButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.dryRunButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 11th bit is set
         if etc_out_value & (1 << 11):
             ui.autoButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.autoButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.autoButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 12th bit is set
         if etc_out_value & (1 << 12):
             ui.zButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.zButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.zButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 13th bit is set
         if etc_out_value & (1 << 13):
             ui.minusButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.minusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.minusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 14th bit is set
         if etc_out_value & (1 << 14):
             ui.ncRefButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.ncRefButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.ncRefButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 15th bit is set
         if etc_out_value & (1 << 15):
             ui.ncOffsetButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.ncOffsetButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.ncOffsetButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 16th bit is set
         if etc_out_value & (1 << 16):
             ui.retForButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.retForButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.retForButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48);")
 
         # Check if the 17th bit is set
         if etc_out_value & (1 << 17):
             ui.retRevButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.retRevButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.retRevButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48);")
 
         # Check if the 18th bit is set
         if etc_out_value & (1 << 18):
             ui.prcEndButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.prcEndButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.prcEndButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48);")
 
         # Check if the 19th bit is set
         if etc_out_value & (1 << 19):
             ui.almOvrButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.almOvrButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.almOvrButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 20th bit is set
         if etc_out_value & (1 << 20):
             ui.almRstButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.almRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.almRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 21st bit is set
         if etc_out_value & (1 << 21):
             ui.lockRstButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
         else:
-            ui.lockRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); border-radius: 65px")
-
-        # Check if the 22nd bit is set
-        if etc_out_value & (1 << 22):
-            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
-        else:
-            pass
-            #ui.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+            ui.lockRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); ")
 
         # Check if the 23rd bit is set
         if etc_out_value & (1 << 23):
