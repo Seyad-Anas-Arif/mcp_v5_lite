@@ -11,31 +11,31 @@ from Ethercat import EtherCATInterface
 from home import Ui_MainWindow
 
 # Constants for button presses as integers
-CYCLE_START_PRESSED = 1
-CYCLE_STOP_PRESSED = 2
-DRV_PRESSED = 3
-JOG_PRESSED = 4
-X_PRESSED = 5
-PLUS_PRESSED = 6
-Z_LOCK_PRESSED = 7
-MDI_PRESSED = 8
-Y_PRESSED = 9
-VVV_PRESSED = 10
-DRY_RUN_PRESSED = 11
-AUTO_PRESSED = 12
-Z_PRESSED = 13
-MINUS_PRESSED = 14
-NC_REF_PRESSED = 15
-NC_OFFSET_PRESSED = 16
-RET_FOR_PRESSED = 17
-RET_REV_PRESSED = 18
-PRC_END_PRESSED = 19
-ALM_OVR_PRESSED = 20
-ALM_RST_PRESSED = 21
-LOCK_RST_PRESSED = 22
-LASER_ON_PRESSED = 23
-LASER_ON_UNPRESSED = 24
 ALL_BUTTONS_UNPRESSED = 0
+CYCLE_START_PRESSED = 1 << 0
+CYCLE_STOP_PRESSED = 1 << 1
+DRV_PRESSED = 1 << 2
+JOG_PRESSED = 1 << 3
+X_PRESSED = 1 << 4
+PLUS_PRESSED = 1 << 5
+Z_LOCK_PRESSED = 1 << 6
+MDI_PRESSED = 1 << 7
+Y_PRESSED  = 1 << 8
+VVV_PRESSED = 1 << 9
+DRY_RUN_PRESSED = 1 << 10
+AUTO_PRESSED = 1 << 11
+Z_PRESSED = 1 << 12
+MINUS_PRESSED = 1 << 13
+NC_REF_PRESSED = 1 << 14
+NC_OFFSET_PRESSED = 1 << 15
+RET_FOR_PRESSED = 1 << 16
+RET_REV_PRESSED = 1 << 17
+PRC_END_PRESSED = 1 << 18
+ALM_OVR_PRESSED = 1 << 19
+ALM_RST_PRESSED = 1 << 20
+LOCK_RST_PRESSED = 1 << 21
+LASER_ON_PRESSED = 1 << 0
+
 ID_REV = 0x0000  # Dummy address for demonstration
 
 # Global variable definition
@@ -336,7 +336,7 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def laser_on_function():
         if ui.laserOnButton.isChecked():
-            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
+            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 0px")
             # handle_button_press(LASER_ON_PRESSED)
             etc_thread.etc_interface.Etc_Buffer_In.LANLong[1] = LASER_ON_PRESSED
             #serial_send(LASER_ON_PRESSED)
