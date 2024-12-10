@@ -336,23 +336,15 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def laser_on_function():
         if ui.laserOnButton.isChecked():
-            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48)")
-            handle_button_press(LASER_ON_PRESSED)
+            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); border-radius: 65px")
+            # handle_button_press(LASER_ON_PRESSED)
+            etc_thread.etc_interface.Etc_Buffer_In.LANLong[1] = LASER_ON_PRESSED
             #serial_send(LASER_ON_PRESSED)
         else:
             ui.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48)")
-            handle_button_press(LASER_ON_UNPRESSED)
+            #handle_button_press(LASER_ON_UNPRESSED)
+            etc_thread.etc_interface.Etc_Buffer_In.LANLong[1] = ALL_BUTTONS_UNPRESSED
             #serial_send(LASER_ON_UNPRESSED)
-
-    
-    # @pyqtSlot()
-    # def laser_on_function():
-    #     if ui.laserOnButton.isChecked():
-    #         ui.laserOnButton.setStyleSheet("color: rgb(250, 122, 72)")
-    #         handle_button_press(LASER_ON_PRESSED)
-    #     else:
-    #         ui.laserOnButton.setStyleSheet("color: rgb(48, 48, 48)")
-    #         handle_button_press(LASER_ON_UNPRESSED)
 
     @pyqtSlot()
     def unpressed_function():
